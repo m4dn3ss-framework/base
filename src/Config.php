@@ -2,7 +2,6 @@
 
 namespace m4dn3ss\framework;
 
-use m4dn3ss\App;
 
 /**
  * Class Config
