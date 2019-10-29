@@ -1,0 +1,13 @@
+{
+    "name": "m4dn3ss-framework/base",
+    "description": "Simple PHP framework base",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Viacheslav Zhabonos",
+            "email": "vyacheslav0310@gmail.com"
+        }
+    ],
+    "require": {}
+}
