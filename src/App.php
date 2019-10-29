@@ -1,10 +1,5 @@
 <?php
-namespace m4dn3ss;
-
-use m4dn3ss\framework\Database;
-use m4dn3ss\framework\Request;
-use m4dn3ss\framework\Config;
-use m4dn3ss\framework\Router;
+namespace m4dn3ss\framework;
 
 /**
  * Class App
