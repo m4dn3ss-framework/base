@@ -2,6 +2,7 @@
     "name": "m4dn3ss-framework/base",
     "description": "Simple PHP framework base",
     "keywords": ["framework", "m4dn3ss"],
+    "version": "0.1",
     "license": "MIT",
     "support": {
       "issues": "https://github.com/m4dn3ss-framework/framework/issues",
