@@ -14,11 +14,14 @@ use m4dn3ss\App;
 
 class Config {
 
-    private static $parameters = null;
+    private static $parameters = null, $configDirectory = null;
 
-    public function __construct()
+    public function __construct($configDirectory)
     {
-        if(self::$parameters == null) {
+    	if (self::$configDirectory === null) {
+    		self::$configDirectory = $configDirectory;
+	    }
+        if (self::$parameters === null) {
             $this->loadParameters();
         }
     }
@@ -48,7 +51,7 @@ class Config {
 
     private function loadParameters()
     {
-        $paramsFile = App::rootDir() . DS . 'config' . DS . 'main.php';
+        $paramsFile = self::$configDirectory . '/main.php';
         if (file_exists($paramsFile)) {
             self::$parameters = include($paramsFile);
         }
