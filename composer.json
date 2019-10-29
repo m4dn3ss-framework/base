@@ -22,7 +22,7 @@
 
     "autoload": {
         "psr-4": {
-            "m4dn3ss\\": "src/"
+            "m4dn3ss\\framework\\": "src/"
         }
     },
     "extra": {
