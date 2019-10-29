@@ -25,7 +25,12 @@
             "m4dn3ss\\": "src/"
         }
     },
-
+    "extra": {
+      "branch-alias": {
+        "dev-master": "stable",
+        "dev-dev": "dev"
+      }
+    },
     "minimum-stability": "stable",
     "prefer-stable": true
 }
