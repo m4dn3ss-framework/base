@@ -2,6 +2,8 @@
 
 namespace m4dn3ss\framework;
 
+use m4dn3ss\App;
+
 /**
  * Class View
  * @package m4dn3ss\framework
@@ -22,15 +24,15 @@ class View
         $this->file = $file . self::TEMPLATES_EXTENSION;
         $this->publicFolderOutside = $publicFolderOutside;
 
-        $baseDir = $_SERVER['DOCUMENT_ROOT'];
+        $baseDir = App::rootDir();
         if($this->publicFolderOutside)
-            $baseDir = $_SERVER['DOCUMENT_ROOT'] . DS . '..';
+            $baseDir = App::rootDir() . DIRECTORY_SEPARATOR . '..';
 
         if($viewDir) {
-            $this->viewDir = $baseDir . DS . $viewDir;
+            $this->viewDir = $baseDir . DIRECTORY_SEPARATOR . $viewDir;
         }
         else {
-            $this->viewDir = $baseDir . DS . self::DEFAULT_VIEW_DIR;
+            $this->viewDir = $baseDir . DIRECTORY_SEPARATOR . self::DEFAULT_VIEW_DIR;
         }
 
         if($template) {
@@ -45,9 +47,9 @@ class View
         if($data !== null && is_array($data)) {
             extract($data);
         }
-        $viewContent = $this->viewDir . DS . $this->file;
+        $viewContent = $this->viewDir . DIRECTORY_SEPARATOR . $this->file;
         ob_start();
-        include $this->viewDir . DS . $this->template;
+        include $this->viewDir . DIRECTORY_SEPARATOR . $this->template;
         return ob_get_clean();
     }
 
@@ -56,7 +58,7 @@ class View
             extract($data);
         }
         ob_start();
-        include $this->viewDir . DS . $this->file;
+        include $this->viewDir . DIRECTORY_SEPARATOR . $this->file;
         return ob_get_clean();
     }
 }
