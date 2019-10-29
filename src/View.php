@@ -16,16 +16,13 @@ class View
 
     const TEMPLATES_EXTENSION = '.php';
 
-    protected $file, $viewDir, $template, $publicFolderOutside;
+    protected $file, $viewDir, $template;
 
-    public function __construct($file, $viewDir = null, $template = null, $publicFolderOutside = true)
+    public function __construct($file, $viewDir = null, $template = null)
     {
         $this->file = $file . self::TEMPLATES_EXTENSION;
-        $this->publicFolderOutside = $publicFolderOutside;
 
         $baseDir = App::rootDir();
-        if($this->publicFolderOutside)
-            $baseDir = App::rootDir() . DIRECTORY_SEPARATOR . '..';
 
         if($viewDir) {
             $this->viewDir = $baseDir . DIRECTORY_SEPARATOR . $viewDir;
