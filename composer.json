@@ -1,8 +1,13 @@
 {
     "name": "m4dn3ss-framework/base",
     "description": "Simple PHP framework base",
+    "keywords": ["framework", "m4dn3ss"],
     "type": "project",
     "license": "MIT",
+    "support": {
+      "issues": "https://github.com/m4dn3ss-framework/framework/issues",
+      "source": "https://github.com/m4dn3ss-framework/framework"
+    },
     "authors": [
         {
             "name": "Viacheslav Zhabonos",
@@ -19,5 +24,8 @@
         "psr-4": {
             "m4dn3ss\\": "src/"
         }
-    }
+    },
+
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
